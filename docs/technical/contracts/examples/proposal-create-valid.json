@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "33333333-3333-4333-8333-333333333333",
+  "inputId": "11111111-1111-4111-8111-111111111111",
+  "createdAt": "2026-11-10T01:00:00.000Z",
+  "intent": "CREATE_TASK",
+  "summary": "整理数据，截止时间未知。",
+  "uncertainFields": [
+    "operations[0].deadline"
+  ],
+  "sourceRefs": [
+    "11111111-1111-4111-8111-111111111111"
+  ],
+  "operations": [
+    {
+      "kind": "CREATE_TASK",
+      "clientEntityId": "22222222-2222-4222-8222-222222222222",
+      "title": "整理数据",
+      "description": "先整理数据，再写结果部分。",
+      "projectId": null,
+      "deadline": {
+        "kind": "NONE",
+        "source": "UNKNOWN",
+        "originalExpression": "尽快"
+      },
+      "estimatedDurationMinutes": null,
+      "completionCriteria": null,
+      "nextAction": null,
+      "complexity": null,
+      "energyRequired": null,
+      "dependencyTaskIds": [],
+      "fieldSources": {
+        "title": "EXPLICIT",
+        "description": "EXPLICIT"
+      },
+      "reason": "用户明确提出整理数据；“尽快”没有精确日期。",
+      "sourceRefs": [
+        "11111111-1111-4111-8111-111111111111"
+      ]
+    }
+  ]
+}

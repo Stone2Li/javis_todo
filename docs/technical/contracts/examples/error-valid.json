@@ -1,0 +1,12 @@
+{
+  "errorId": "55555555-5555-4555-8555-555555555555",
+  "code": "REVISION_CONFLICT",
+  "category": "conflict",
+  "retryable": false,
+  "messageKey": "errors.revision_conflict",
+  "recoveryAction": "REFRESH_VIEW",
+  "details": {
+    "expectedRevision": 7,
+    "currentRevision": 8
+  }
+}

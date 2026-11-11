@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:jarvis-todo:error:1.0",
+  "title": "Jarvis sanitized error v1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "errorId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "code": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_]{1,79}$"
+    },
+    "category": {
+      "enum": [
+        "validation",
+        "conflict",
+        "storage",
+        "permission",
+        "provider",
+        "entitlement",
+        "transport",
+        "internal"
+      ]
+    },
+    "retryable": {
+      "type": "boolean"
+    },
+    "messageKey": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "recoveryAction": {
+      "enum": [
+        "FIX_INPUT",
+        "REFRESH_VIEW",
+        "RETRY_LATER",
+        "EDIT_PROVIDER",
+        "UNLOCK_DEVICE",
+        "REQUEST_PERMISSION",
+        "RESTORE_BACKUP",
+        "FREE_STORAGE",
+        "CHOOSE_AI_MODE",
+        "CONFIRM_CONSENT",
+        "REVERIFY_PURCHASE",
+        "CONTACT_SUPPORT",
+        "NONE"
+      ]
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "retryAfterSeconds": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "field": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "currentRevision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "providerHttpStatus": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 599
+        }
+      },
+      "required": []
+    }
+  },
+  "required": [
+    "errorId",
+    "code",
+    "category",
+    "retryable",
+    "messageKey",
+    "recoveryAction",
+    "details"
+  ]
+}

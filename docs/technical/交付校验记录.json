@@ -1,0 +1,92 @@
+{
+  "documentDate": "2026-11-10",
+  "checkedAtUtc": "2026-11-11T15:02:43.237022+00:00",
+  "scope": "文档与契约示例；不代表业务逻辑或平台已实现/通过",
+  "validator": "jsonschema 4.26.0",
+  "dateTimeAssertion": "explicit UTC millisecond pattern + datetime parser",
+  "checks": [
+    {
+      "check": "markdown-local-links-and-fences",
+      "result": "PASS"
+    },
+    {
+      "check": "draft-2020-12-schema-validity",
+      "result": "PASS"
+    },
+    {
+      "check": "proposal-create-valid.json",
+      "expectedValid": true,
+      "result": "PASS"
+    },
+    {
+      "check": "proposal-review-valid.json",
+      "expectedValid": true,
+      "result": "PASS"
+    },
+    {
+      "check": "proposal-extra-field-invalid.json",
+      "expectedValid": false,
+      "result": "PASS"
+    },
+    {
+      "check": "error-valid.json",
+      "expectedValid": true,
+      "result": "PASS"
+    },
+    {
+      "check": "reject-invalid-uuid",
+      "result": "PASS"
+    },
+    {
+      "check": "reject-impossible-date-time",
+      "result": "PASS"
+    },
+    {
+      "check": "reject-non-utc-date-time",
+      "result": "PASS"
+    },
+    {
+      "check": "reject-unknown-schema-version",
+      "result": "PASS"
+    },
+    {
+      "check": "reject-blank-title",
+      "result": "PASS"
+    },
+    {
+      "check": "reject-extra-deadline-fields",
+      "result": "PASS"
+    },
+    {
+      "check": "date-2026-02-28",
+      "expectedValid": true,
+      "result": "PASS"
+    },
+    {
+      "check": "date-2026-02-30",
+      "expectedValid": false,
+      "result": "PASS"
+    },
+    {
+      "check": "semantic-case-schema-precondition",
+      "result": "PASS",
+      "cases": 4,
+      "domainExecution": "NOT_RUN"
+    },
+    {
+      "check": "module-and-release-coverage",
+      "result": "PASS",
+      "modules": 17,
+      "releaseCriteria": 22
+    }
+  ],
+  "notRun": [
+    "领域语义执行",
+    "原生编译/真机",
+    "数据库迁移",
+    "模型/ASR/密钥适配器",
+    "Hosted并发账本",
+    "真实购买与商店审核",
+    "端到端应用旅程"
+  ]
+}

@@ -1,0 +1,545 @@
+{
+  "research_date": "2026-11-10 Asia/Shanghai",
+  "scope": "PRD V1.1前置技术调研；HTTP成功不等于正文或能力已验证",
+  "records": [
+    {
+      "name": "apple-transcriber-available",
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/speechtranscriber/isavailable.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/speech/speechtranscriber/isavailable.json",
+      "file": "apple-transcriber-available.json",
+      "status": 200,
+      "bytes": 4970,
+      "sha256": "13d9ac6790b23acf07481b21b9a976260158b67f317d2b647c098bf3591d9bff",
+      "at": "2026-11-09T16:09:55.921036+00:00"
+    },
+    {
+      "name": "apple-transcriber-locales",
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/speechtranscriber/supportedlocales.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/speech/speechtranscriber/supportedlocales.json",
+      "file": "apple-transcriber-locales.json",
+      "status": 200,
+      "bytes": 7648,
+      "sha256": "ee567ac4d8396e1809d1d6e186d107a2cdcba52ea6706cd59e2285fbff42ff9b",
+      "at": "2026-11-09T16:09:56.283922+00:00"
+    },
+    {
+      "name": "apple-assets",
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/assetinventory.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/speech/assetinventory.json",
+      "file": "apple-assets.json",
+      "status": 200,
+      "bytes": 18437,
+      "sha256": "f838dc867c07564b23cb688ad845999ba6a06a364005aca2ba17e79292bec2bb",
+      "at": "2026-11-09T16:09:56.268751+00:00"
+    },
+    {
+      "name": "apple-dictation",
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/dictationtranscriber.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/speech/dictationtranscriber.json",
+      "file": "apple-dictation.json",
+      "status": 200,
+      "bytes": 33088,
+      "sha256": "0197cb9af9a6028e02efc04b52a2ce4b547f6588074fad8287e00af81e77f100",
+      "at": "2026-11-09T16:09:56.221908+00:00"
+    },
+    {
+      "name": "apple-speech-permission",
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/asking-permission-to-use-speech-recognition.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/speech/asking-permission-to-use-speech-recognition.json",
+      "file": "apple-speech-permission.json",
+      "status": 200,
+      "bytes": 20326,
+      "sha256": "8098b6739b9bbb8a8471d9ab8220dc6babd44721145c2e95ef81b7a8925b03e5",
+      "at": "2026-11-09T16:09:56.102980+00:00"
+    },
+    {
+      "name": "apple-apptransaction-id",
+      "url": "https://developer.apple.com/tutorials/data/documentation/storekit/apptransaction/apptransactionid.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/storekit/apptransaction/apptransactionid.json",
+      "file": "apple-apptransaction-id.json",
+      "status": 200,
+      "bytes": 13793,
+      "sha256": "33069d5da0a0f9489337e0dc6e0a06e2af4c4380cc0a824536368bf34b039c87",
+      "at": "2026-11-09T16:04:02.836511+00:00"
+    },
+    {
+      "name": "apple-apptransaction-shared",
+      "url": "https://developer.apple.com/tutorials/data/documentation/storekit/apptransaction/shared.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/storekit/apptransaction/shared.json",
+      "file": "apple-apptransaction-shared.json",
+      "status": 200,
+      "bytes": 9268,
+      "sha256": "397357b6813beecb39938d20159d03aaf5f8548b4f247de30ef2710704f02f57",
+      "at": "2026-11-09T16:04:02.571760+00:00"
+    },
+    {
+      "name": "apple-apptransaction-device",
+      "url": "https://developer.apple.com/tutorials/data/documentation/storekit/apptransaction/deviceverification.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/storekit/apptransaction/deviceverification.json",
+      "file": "apple-apptransaction-device.json",
+      "status": 200,
+      "bytes": 7456,
+      "sha256": "cc8d108fd987728b8950752694ea552c25ab44a43eece2c622d6599e71024fdf",
+      "at": "2026-11-09T16:04:02.799811+00:00"
+    },
+    {
+      "name": "apple-apptransaction-refresh",
+      "url": "https://developer.apple.com/tutorials/data/documentation/storekit/apptransaction/refresh().json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/storekit/apptransaction/refresh().json",
+      "file": "apple-apptransaction-refresh.json",
+      "status": 200,
+      "bytes": 10503,
+      "sha256": "35b67d70b0b89b899875bd2644e1ae3b973ebff78bc064646f7b3381ab8d0ee6",
+      "at": "2026-11-09T16:04:02.944290+00:00"
+    },
+    {
+      "name": "apple-asr-ondevice",
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/sfspeechrecognizer/supportsondevicerecognition.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/speech/sfspeechrecognizer/supportsondevicerecognition.json",
+      "file": "apple-asr-ondevice.json",
+      "status": 200,
+      "bytes": 15659,
+      "sha256": "d4bde28d08fcf4f192be276a83f80fde59e8afc6325be2f3ba4af34ccad2f723",
+      "at": "2026-11-09T16:04:02.909349+00:00"
+    },
+    {
+      "name": "apple-asr-require-ondevice",
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/sfspeechrecognitionrequest/requiresondevicerecognition.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/speech/sfspeechrecognitionrequest/requiresondevicerecognition.json",
+      "file": "apple-asr-require-ondevice.json",
+      "status": 200,
+      "bytes": 15196,
+      "sha256": "dd8a048052b94795ff650b4ffb9ae69249989efa30c655b92442e3b85bd5c6f4",
+      "at": "2026-11-09T16:04:03.265396+00:00"
+    },
+    {
+      "name": "apple-speech-analyzer",
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/speechanalyzer.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/speech/speechanalyzer.json",
+      "file": "apple-speech-analyzer.json",
+      "status": 200,
+      "bytes": 66027,
+      "sha256": "256c5264b54d843bf4946f55d409c8a7f78e320c2c2e7f70b5bc391a33570a8e",
+      "at": "2026-11-09T16:04:05.589168+00:00"
+    },
+    {
+      "name": "apple-speech-transcriber",
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/speechtranscriber.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/speech/speechtranscriber.json",
+      "file": "apple-speech-transcriber.json",
+      "status": 200,
+      "bytes": 23235,
+      "sha256": "f6112150776c80d816ca9d62c13ebee8cf52e47da3b0ebd6b88d571e323661d0",
+      "at": "2026-11-09T16:04:05.627623+00:00"
+    },
+    {
+      "name": "apple-widget",
+      "url": "https://developer.apple.com/tutorials/data/documentation/widgetkit/keeping-a-widget-up-to-date.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/widgetkit/keeping-a-widget-up-to-date.json",
+      "file": "apple-widget.json",
+      "status": 200,
+      "bytes": 47187,
+      "sha256": "893b735557f543b51bd07fa60a6a5247bc10beffdf7c9001b38f27e3d79fef31",
+      "at": "2026-11-09T16:04:06.044782+00:00"
+    },
+    {
+      "name": "apple-background",
+      "url": "https://developer.apple.com/tutorials/data/documentation/backgroundtasks.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/backgroundtasks.json",
+      "file": "apple-background.json",
+      "status": 200,
+      "bytes": 26609,
+      "sha256": "cc339de7a9ca8a13e2a3778831ef4095dfb3be67b716ef5379164adfdb0ae930",
+      "at": "2026-11-09T16:04:05.815633+00:00"
+    },
+    {
+      "name": "apple-keychain",
+      "url": "https://developer.apple.com/tutorials/data/documentation/security/keychain-services.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/security/keychain-services.json",
+      "file": "apple-keychain.json",
+      "status": 200,
+      "bytes": 6106,
+      "sha256": "b87fd9b81d1badc6d7677d07556469ad769d9dec3a472dda33172fcd7a126e6a",
+      "at": "2026-11-09T16:04:05.399266+00:00"
+    },
+    {
+      "name": "apple-membership",
+      "url": "https://developer.apple.com/support/compare-memberships/",
+      "final_url": "https://developer.apple.com/help/account/basics/about-your-developer-account",
+      "file": "apple-membership.html",
+      "status": 200,
+      "bytes": 200223,
+      "sha256": "3abdc55cd37bcdb4fd41533536dd8d0422a649439a3a532ed6ff06d75bbc8077",
+      "at": "2026-11-09T16:04:07.232131+00:00"
+    },
+    {
+      "name": "apple-app-price",
+      "url": "https://developer.apple.com/help/app-store-connect/manage-app-pricing/set-a-price/",
+      "final_url": "https://developer.apple.com/help/app-store-connect/manage-app-pricing/set-a-price/",
+      "file": "apple-app-price.html",
+      "status": 200,
+      "bytes": 375342,
+      "sha256": "6da5a6c491b17a66d2c1b1728baf092f83537e09a3152eb4fef5a114a61fd594",
+      "at": "2026-11-09T16:04:09.400734+00:00"
+    },
+    {
+      "name": "apple-live-activity",
+      "url": "https://developer.apple.com/tutorials/data/documentation/activitykit/displaying-live-data-with-live-activities.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/activitykit/displaying-live-data-with-live-activities.json",
+      "file": "apple-live-activity.json",
+      "status": 200,
+      "bytes": 138078,
+      "sha256": "b82deb02f3a040f6e253adf4085da029da9381414b901a978cf12a15cd2439b8",
+      "at": "2026-11-09T16:04:09.047173+00:00"
+    },
+    {
+      "name": "apple-enroll",
+      "url": "https://developer.apple.com/programs/enroll/",
+      "final_url": "https://developer.apple.com/programs/enroll/",
+      "file": "apple-enroll.html",
+      "status": 200,
+      "bytes": 109552,
+      "sha256": "96f97ad51b846a7c583344b76ebc5959d9efdb6f329e10b6054f105f55af5997",
+      "at": "2026-11-09T16:06:18.218216+00:00"
+    },
+    {
+      "name": "apple-xcode",
+      "url": "https://developer.apple.com/support/xcode/",
+      "final_url": "https://developer.apple.com/xcode/system-requirements",
+      "file": "apple-xcode.html",
+      "status": 200,
+      "bytes": 144437,
+      "sha256": "f58d6dbecff74eef7e947eaf9ff9f0d6fe36ac55c3c69c41ff3fea90ac502a20",
+      "at": "2026-11-09T16:06:21.429346+00:00"
+    },
+    {
+      "name": "apple-app-info",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/app-information/",
+      "final_url": "https://developer.apple.com/help/app-store-connect/reference/app-information/app-information/",
+      "file": "apple-app-info.html",
+      "status": 200,
+      "bytes": 379168,
+      "sha256": "f8d3d24fd01a841c6e03886ab8a1a4ae6c213b29d0381380d0b3ce669979b668",
+      "at": "2026-11-09T16:06:18.460657+00:00"
+    },
+    {
+      "name": "apple-privacy",
+      "url": "https://developer.apple.com/app-store/app-privacy-details/",
+      "final_url": "https://developer.apple.com/app-store/app-privacy-details/",
+      "file": "apple-privacy.html",
+      "status": 200,
+      "bytes": 134919,
+      "sha256": "69b3b3ce06f98decfac771b63f7fdd41f04de3dbc5addf6ee0025ece3cacdaec",
+      "at": "2026-11-09T16:06:17.800091+00:00"
+    },
+    {
+      "name": "apple-device-key",
+      "url": "https://developer.apple.com/tutorials/data/documentation/security/ksecattraccessiblewhenunlockedthisdeviceonly.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/security/ksecattraccessiblewhenunlockedthisdeviceonly.json",
+      "file": "apple-device-key.json",
+      "status": 200,
+      "bytes": 8323,
+      "sha256": "b0f56137fa211e382f13f2dd1a7808932309bac5a86ef37ea3a23f406a5f60ae",
+      "at": "2026-11-09T16:06:17.254568+00:00"
+    },
+    {
+      "name": "apple-store-app-id",
+      "url": "https://developer.apple.com/tutorials/data/documentation/appstoreserverapi/apptransactionid.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/appstoreserverapi/apptransactionid.json",
+      "file": "apple-store-app-id.json",
+      "status": 200,
+      "bytes": 5436,
+      "sha256": "ec00de78a46a477e22a604af3aedb00db486a37d1b5a79c2f8d1c415cdb7a9e9",
+      "at": "2026-11-09T16:06:17.582042+00:00"
+    },
+    {
+      "name": "apple-transaction-business",
+      "url": "https://developer.apple.com/tutorials/data/documentation/storekit/supporting-business-model-changes-by-using-the-app-transaction.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/storekit/supporting-business-model-changes-by-using-the-app-transaction.json",
+      "file": "apple-transaction-business.json",
+      "status": 200,
+      "bytes": 11563,
+      "sha256": "5c0da6310a4e658affb101305eca9b195cb50e4d621db6997ecccf58dbb153dc",
+      "at": "2026-11-09T16:06:20.119113+00:00"
+    },
+    {
+      "name": "apple-controls",
+      "url": "https://developer.apple.com/tutorials/data/documentation/widgetkit/creating-controls-to-perform-actions-across-the-system.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/widgetkit/creating-controls-to-perform-actions-across-the-system.json",
+      "file": "apple-controls.json",
+      "status": 200,
+      "bytes": 34381,
+      "sha256": "4067d2bc357c932f2bfa4825c78010cb0a525ad0977f7f38d2fcb3b487f3cc57",
+      "at": "2026-11-09T16:06:19.895113+00:00"
+    },
+    {
+      "name": "huawei-iap-product",
+      "url": "https://developer.huawei.com/consumer/cn/hms/huawei-iap/",
+      "final_url": "https://developer.huawei.com/consumer/cn/hms/huawei-iap/",
+      "file": "huawei-iap-product.html",
+      "status": 200,
+      "bytes": 96247,
+      "sha256": "71b8cb19d1dfff05d29989fcb197ba45de08e34c30213eaaee0b8000250c0b75",
+      "at": "2026-11-09T16:06:20.335496+00:00"
+    },
+    {
+      "name": "huawei-core-speech",
+      "url": "https://developer.huawei.com/consumer/cn/harmonyos-core-speech-kit/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "huawei-live-view",
+      "url": "https://developer.huawei.com/consumer/cn/harmonyos-live-view-kit/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "huawei-deveco",
+      "url": "https://developer.huawei.com/consumer/cn/deveco-studio/",
+      "final_url": "https://developer.huawei.com/consumer/cn/deveco-studio/",
+      "file": "huawei-deveco.html",
+      "status": 200,
+      "bytes": 157152,
+      "sha256": "e4b21b2fba273bc857df4fc3e23bb63d477f39407f23131fc98a85894f4d7e4f",
+      "at": "2026-11-09T16:06:21.718181+00:00"
+    },
+    {
+      "name": "huawei-main",
+      "url": "https://developer.huawei.com/consumer/cn/doc/main.ac526e80229f89f6.js",
+      "final_url": "https://developer.huawei.com/consumer/cn/doc/main.ac526e80229f89f6.js",
+      "file": "huawei-main.html",
+      "status": 200,
+      "bytes": 228942,
+      "sha256": "9349b3ca7c18a2afee8349aecc4e70633ff34c4816b441c8a7fe757ad0eff00e",
+      "at": "2026-11-09T16:05:13.745816+00:00"
+    },
+    {
+      "name": "huawei-env",
+      "url": "https://developer.huawei.com/consumer/cn/doc/assets/const/official/env.20261102201554.js",
+      "final_url": "https://developer.huawei.com/consumer/cn/doc/assets/const/official/env.20261102201554.js",
+      "file": "huawei-env.html",
+      "status": 200,
+      "bytes": 30176,
+      "sha256": "8163c8e76d601ad121ba8ea419f72c90323881a55341ce219c0e11061744411d",
+      "at": "2026-11-09T16:05:13.506400+00:00"
+    },
+    {
+      "name": "huawei-base",
+      "url": "https://developer.huawei.com/consumer/cn/doc/assets/js/base.js",
+      "final_url": "https://developer.huawei.com/consumer/cn/doc/assets/js/base.js",
+      "file": "huawei-base.html",
+      "status": 200,
+      "bytes": 504,
+      "sha256": "0b35e851eb529061f04b0b81f8d58e9757ca861c12a42f5343a85376fae2a79e",
+      "at": "2026-11-09T16:05:11.738007+00:00"
+    },
+    {
+      "name": "apple-review",
+      "url": "https://developer.apple.com/app-store/review/guidelines/",
+      "final_url": "https://developer.apple.com/app-store/review/guidelines/",
+      "file": "apple-review.html",
+      "status": 200,
+      "bytes": 240818,
+      "sha256": "8dd4b8514a535d05d78d5a1515fcb1cf4289e976b453ba6541b17cc7cd76bb33",
+      "at": "2026-11-09T16:02:47.055436+00:00"
+    },
+    {
+      "name": "apple-apptransaction",
+      "url": "https://developer.apple.com/tutorials/data/documentation/storekit/apptransaction.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/storekit/apptransaction.json",
+      "file": "apple-apptransaction.json",
+      "status": 200,
+      "bytes": 31912,
+      "sha256": "b38e27d09275c9a276be4db35fdefcf770ec460b311fe88d46215ca56f298ece",
+      "at": "2026-11-09T16:02:48.048810+00:00"
+    },
+    {
+      "name": "apple-speech",
+      "url": "https://developer.apple.com/tutorials/data/documentation/speech/sfspeechrecognizer.json",
+      "final_url": "https://developer.apple.com/tutorials/data/documentation/speech/sfspeechrecognizer.json",
+      "file": "apple-speech.json",
+      "status": 200,
+      "bytes": 48731,
+      "sha256": "93971e38ffb817e9eb06eeb9e5291ad79df094f820bd7b4018a45866a9bf9882",
+      "at": "2026-11-09T16:02:47.187861+00:00"
+    },
+    {
+      "name": "huawei-overview",
+      "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/overview",
+      "final_url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/overview",
+      "file": "huawei-overview.html",
+      "status": 200,
+      "bytes": 4241,
+      "sha256": "0ebf655b6a60fd21b9226c087e95838b17b6d2a5f3ca6cf2a84cd7bec5d87846",
+      "at": "2026-11-09T16:02:45.868008+00:00"
+    },
+    {
+      "name": "flutter-platforms",
+      "url": "https://docs.flutter.dev/reference/supported-platforms",
+      "final_url": "https://docs.flutter.dev/reference/supported-platforms",
+      "file": "flutter-platforms.html",
+      "status": 200,
+      "bytes": 141802,
+      "sha256": "11096d6a0fd53ec120a0dae74ed0a88e34e6301be468e9b4c967c11a03c232b6",
+      "at": "2026-11-09T16:02:45.470489+00:00"
+    },
+    {
+      "name": "kmp-platforms",
+      "url": "https://kotlinlang.org/docs/multiplatform/supported-platforms.html",
+      "final_url": "https://kotlinlang.org/docs/multiplatform/supported-platforms.html",
+      "file": "kmp-platforms.html",
+      "status": 200,
+      "bytes": 14702,
+      "sha256": "da562d2eb383df1c775c8732ed1a98697ebaeafefdcbb806a66b307e06302982",
+      "at": "2026-11-09T16:02:45.866390+00:00"
+    },
+    {
+      "name": "openai-structured",
+      "url": "https://platform.openai.com/docs/guides/structured-outputs",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "rn-platforms",
+      "url": "https://reactnative.dev/docs/out-of-tree-platforms",
+      "final_url": "https://reactnative.dev/docs/out-of-tree-platforms",
+      "file": "rn-platforms.html",
+      "status": 200,
+      "bytes": 35289,
+      "sha256": "870db4168658139d27943e70c245900d555f545fc3bb1faa510f8d1983d66739",
+      "at": "2026-11-09T16:02:48.790330+00:00"
+    },
+    {
+      "name": "huawei-speech-product",
+      "url": "https://developer.huawei.com/consumer/cn/sdk/core-speech-kit",
+      "final_url": "https://developer.huawei.com/consumer/cn/sdk/core-speech-kit",
+      "file": "huawei-speech-product.html",
+      "status": 200,
+      "bytes": 53554,
+      "sha256": "40c03793bde034a0c5f3b56b5d09bd34c84a6620ea87d880ce7e6122b1334ed3",
+      "at": "2026-11-09T16:07:20.945628+00:00"
+    },
+    {
+      "name": "huawei-iap-native",
+      "url": "https://developer.huawei.com/consumer/cn/sdk/iap-kit",
+      "final_url": "https://developer.huawei.com/consumer/cn/sdk/iap-kit",
+      "file": "huawei-iap-native.html",
+      "status": 200,
+      "bytes": 90271,
+      "sha256": "dd84bfa562d5bfce0424dee3bb840094f550bf61ed63d775b88895630efe21e5",
+      "at": "2026-11-09T16:07:19.484861+00:00"
+    },
+    {
+      "name": "huawei-live-product",
+      "url": "https://developer.huawei.com/consumer/cn/sdk/live-view-kit",
+      "final_url": "https://developer.huawei.com/consumer/cn/sdk/live-view-kit",
+      "file": "huawei-live-product.html",
+      "status": 200,
+      "bytes": 72836,
+      "sha256": "48162a24eb96236a09a52ce5b585c3dac30f17fb77479f7fe47e95fa0f5ebd5e",
+      "at": "2026-11-09T16:07:21.290554+00:00"
+    },
+    {
+      "name": "apple-china-compliance",
+      "url": "https://developer.apple.com/help/app-store-connect/manage-compliance-information/view-china-mainland-compliance-information",
+      "final_url": "https://developer.apple.com/help/app-store-connect/manage-compliance-information/view-china-mainland-compliance-information",
+      "file": "apple-china-compliance.html",
+      "status": 200,
+      "bytes": 367581,
+      "sha256": "f1a18c937fdd1f4c5b1380960548b5a0fdd66dda120445122eff6279000c1020",
+      "at": "2026-11-09T16:07:21.958318+00:00"
+    },
+    {
+      "name": "miit-app-filing",
+      "url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2023/art_920db564162e4312916a01bed6540ad8.html",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "deepseek-docs",
+      "url": "https://api-docs.deepseek.com/zh-cn/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "aliyun-models",
+      "url": "https://help.aliyun.com/zh/model-studio/getting-started/what-is-model-studio",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "openai-regions",
+      "url": "https://help.openai.com/en/articles/5347006-openai-api-supported-countries-and-territories",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "grdb-readme",
+      "url": "https://raw.githubusercontent.com/groue/GRDB.swift/master/README.md",
+      "final_url": "https://raw.githubusercontent.com/groue/GRDB.swift/master/README.md",
+      "file": "grdb-readme.html",
+      "status": 200,
+      "bytes": 232202,
+      "sha256": "bafde28c888b8177269ff24babb70db7c3377581cdacb0b0417f863213c5414c",
+      "at": "2026-11-09T16:10:54.166649+00:00"
+    },
+    {
+      "name": "grdb-license",
+      "url": "https://raw.githubusercontent.com/groue/GRDB.swift/master/LICENSE",
+      "final_url": "https://raw.githubusercontent.com/groue/GRDB.swift/master/LICENSE",
+      "file": "grdb-license.html",
+      "status": 200,
+      "bytes": 1062,
+      "sha256": "9853f9dce81365fcc1d9b46004633354450164b8d17904e92e80c444545f7e87",
+      "at": "2026-11-09T16:10:53.939862+00:00"
+    },
+    {
+      "name": "swift-markdown",
+      "url": "https://raw.githubusercontent.com/swiftlang/swift-markdown/main/README.md",
+      "final_url": "https://raw.githubusercontent.com/swiftlang/swift-markdown/main/README.md",
+      "file": "swift-markdown.html",
+      "status": 200,
+      "bytes": 2702,
+      "sha256": "321c748e3f53f7960a8aefd2225e359358b1d0097fb239b25fc466986dfccfd5",
+      "at": "2026-11-09T16:10:53.911734+00:00"
+    },
+    {
+      "name": "swift-markdown-license",
+      "url": "https://raw.githubusercontent.com/swiftlang/swift-markdown/main/LICENSE.txt",
+      "final_url": "https://raw.githubusercontent.com/swiftlang/swift-markdown/main/LICENSE.txt",
+      "file": "swift-markdown-license.html",
+      "status": 200,
+      "bytes": 11753,
+      "sha256": "167beb36f181bd163c93c6feb45c68e5f9462fe1af55b278f7bfd1df20e673a3",
+      "at": "2026-11-09T16:10:53.646277+00:00"
+    },
+    {
+      "name": "harmony-rdb-versioned",
+      "url": "https://raw.githubusercontent.com/openharmony/docs/f41b9345badd47c7ab0c263344cd7f4b5a549afb/en/application-dev/database/data-persistence-by-rdb-store.md",
+      "final_url": "https://raw.githubusercontent.com/openharmony/docs/f41b9345badd47c7ab0c263344cd7f4b5a549afb/en/application-dev/database/data-persistence-by-rdb-store.md",
+      "file": "harmony-rdb-versioned.html",
+      "status": 200,
+      "bytes": 28478,
+      "sha256": "52b86a0b07c1f3f1a37c9e33cb6c12a60b8f3724a9b5004e735306ea02adee81",
+      "at": "2026-11-09T16:10:53.724723+00:00"
+    },
+    {
+      "name": "harmony-form-versioned",
+      "url": "https://raw.githubusercontent.com/openharmony/docs/f41b9345badd47c7ab0c263344cd7f4b5a549afb/en/application-dev/form/arkts-form-overview.md",
+      "final_url": "https://raw.githubusercontent.com/openharmony/docs/f41b9345badd47c7ab0c263344cd7f4b5a549afb/en/application-dev/form/arkts-form-overview.md",
+      "file": "harmony-form-versioned.html",
+      "status": 200,
+      "bytes": 9179,
+      "sha256": "128ed412c77c1a268110868855aa0f4319f787fec2098cbad7a3640e4ae052ae",
+      "at": "2026-11-09T16:10:53.747729+00:00"
+    },
+    {
+      "name": "deveco-cli-registry",
+      "url": "https://registry.npmjs.org/@deveco%2fdeveco-cli",
+      "status": 200,
+      "bytes": 43173,
+      "sha256": "43a2b97d5acb06b9ff2c82db812b422c21333a9ee851a76bbade72f92a1fc3f6"
+    },
+    {
+      "name": "deveco-code-registry",
+      "url": "https://registry.npmjs.org/@deveco%2fdeveco-code",
+      "status": 200,
+      "bytes": 260083,
+      "sha256": "3126fc8dd19ff1676fdac10cca5de55bad343b4b914c48d24be8fa91c8e00438"
+    }
+  ]
+}

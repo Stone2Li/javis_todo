@@ -1,0 +1,631 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:jarvis-todo:ai-proposal:1.0",
+  "title": "Jarvis internal AI mutation proposal v1.0",
+  "description": "内部提案，不授予写权限。引用、revision、时区、来源、意图一致性和用户确认由业务层验证。",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "proposalId": {
+      "$ref": "#/$defs/uuid"
+    },
+    "inputId": {
+      "$ref": "#/$defs/uuid"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+    },
+    "intent": {
+      "enum": [
+        "CREATE_TASK",
+        "UPDATE_TASK",
+        "DELETE_TASK",
+        "ADD_NOTE",
+        "LOG_PROGRESS",
+        "ADD_RESULT",
+        "REVIEW",
+        "UNKNOWN"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "uncertainFields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "minItems": 0,
+      "maxItems": 200,
+      "uniqueItems": true
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/uuid"
+      },
+      "minItems": 0,
+      "maxItems": 200,
+      "uniqueItems": true
+    },
+    "operations": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 50,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "const": "CREATE_TASK"
+              },
+              "clientEntityId": {
+                "$ref": "#/$defs/uuid"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "description": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "projectId": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "deadline": {
+                "$ref": "#/$defs/deadline"
+              },
+              "estimatedDurationMinutes": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 1,
+                "maximum": 1440
+              },
+              "completionCriteria": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "maxLength": 20000
+              },
+              "nextAction": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "maxLength": 20000
+              },
+              "complexity": {
+                "enum": [
+                  "LOW",
+                  "MEDIUM",
+                  "HIGH",
+                  null
+                ]
+              },
+              "energyRequired": {
+                "enum": [
+                  "LOW",
+                  "MEDIUM",
+                  "HIGH",
+                  null
+                ]
+              },
+              "dependencyTaskIds": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/uuid"
+                },
+                "minItems": 0,
+                "maxItems": 50,
+                "uniqueItems": true
+              },
+              "fieldSources": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string",
+                  "enum": [
+                    "EXPLICIT",
+                    "INFERRED"
+                  ]
+                },
+                "propertyNames": {
+                  "enum": [
+                    "title",
+                    "description",
+                    "projectId",
+                    "deadline",
+                    "estimatedDurationMinutes",
+                    "completionCriteria",
+                    "nextAction",
+                    "complexity",
+                    "energyRequired",
+                    "dependencyTaskIds"
+                  ]
+                },
+                "minProperties": 1,
+                "required": [
+                  "title",
+                  "description"
+                ]
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "sourceRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/uuid"
+                },
+                "minItems": 1,
+                "maxItems": 200,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "kind",
+              "clientEntityId",
+              "title",
+              "description",
+              "projectId",
+              "deadline",
+              "estimatedDurationMinutes",
+              "completionCriteria",
+              "nextAction",
+              "complexity",
+              "energyRequired",
+              "dependencyTaskIds",
+              "fieldSources",
+              "reason",
+              "sourceRefs"
+            ]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "const": "UPDATE_TASK"
+              },
+              "taskId": {
+                "$ref": "#/$defs/uuid"
+              },
+              "expectedRevision": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "patch": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "description": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "projectId": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "deadline": {
+                    "$ref": "#/$defs/deadline"
+                  },
+                  "estimatedDurationMinutes": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 1,
+                    "maximum": 1440
+                  },
+                  "completionCriteria": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 20000
+                  },
+                  "nextAction": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 20000
+                  },
+                  "complexity": {
+                    "enum": [
+                      "LOW",
+                      "MEDIUM",
+                      "HIGH",
+                      null
+                    ]
+                  },
+                  "energyRequired": {
+                    "enum": [
+                      "LOW",
+                      "MEDIUM",
+                      "HIGH",
+                      null
+                    ]
+                  },
+                  "dependencyTaskIds": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/uuid"
+                    },
+                    "minItems": 0,
+                    "maxItems": 50,
+                    "uniqueItems": true
+                  }
+                },
+                "required": [],
+                "minProperties": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "sourceRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/uuid"
+                },
+                "minItems": 1,
+                "maxItems": 200,
+                "uniqueItems": true
+              },
+              "fieldSources": {
+                "type": "object",
+                "additionalProperties": {
+                  "enum": [
+                    "EXPLICIT",
+                    "INFERRED"
+                  ]
+                },
+                "propertyNames": {
+                  "enum": [
+                    "title",
+                    "description",
+                    "projectId",
+                    "deadline",
+                    "estimatedDurationMinutes",
+                    "completionCriteria",
+                    "nextAction",
+                    "complexity",
+                    "energyRequired",
+                    "dependencyTaskIds"
+                  ]
+                },
+                "minProperties": 1
+              }
+            },
+            "required": [
+              "kind",
+              "taskId",
+              "expectedRevision",
+              "patch",
+              "reason",
+              "sourceRefs",
+              "fieldSources"
+            ]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "const": "SET_TASK_STATUS"
+              },
+              "taskId": {
+                "$ref": "#/$defs/uuid"
+              },
+              "expectedRevision": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "INBOX",
+                  "TODO",
+                  "IN_PROGRESS",
+                  "BLOCKED",
+                  "DONE",
+                  "DEFERRED",
+                  "ARCHIVED"
+                ]
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "sourceRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/uuid"
+                },
+                "minItems": 1,
+                "maxItems": 200,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "kind",
+              "taskId",
+              "expectedRevision",
+              "status",
+              "reason",
+              "sourceRefs"
+            ]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "const": "DELETE_TASK"
+              },
+              "taskId": {
+                "$ref": "#/$defs/uuid"
+              },
+              "expectedRevision": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "sourceRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/uuid"
+                },
+                "minItems": 1,
+                "maxItems": 200,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "kind",
+              "taskId",
+              "expectedRevision",
+              "reason",
+              "sourceRefs"
+            ]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "const": "APPEND_CONTENT"
+              },
+              "owner": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "enum": [
+                      "TASK",
+                      "PROJECT"
+                    ]
+                  },
+                  "id": {
+                    "$ref": "#/$defs/uuid"
+                  }
+                },
+                "required": [
+                  "type",
+                  "id"
+                ]
+              },
+              "expectedRevision": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "entryType": {
+                "enum": [
+                  "NOTE",
+                  "WORK_LOG",
+                  "RESULT",
+                  "REFLECTION"
+                ]
+              },
+              "content": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 20000
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "sourceRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/uuid"
+                },
+                "minItems": 1,
+                "maxItems": 200,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "kind",
+              "owner",
+              "expectedRevision",
+              "entryType",
+              "content",
+              "reason",
+              "sourceRefs"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "deadline": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "NONE"
+            },
+            "source": {
+              "const": "UNKNOWN"
+            },
+            "originalExpression": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "kind",
+            "source",
+            "originalExpression"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "DATE"
+            },
+            "localDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "zoneId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "source": {
+              "type": "string",
+              "enum": [
+                "EXPLICIT",
+                "INFERRED"
+              ]
+            },
+            "originalExpression": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "kind",
+            "localDate",
+            "zoneId",
+            "source",
+            "originalExpression"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "INSTANT"
+            },
+            "instant": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+            },
+            "zoneId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "source": {
+              "type": "string",
+              "enum": [
+                "EXPLICIT",
+                "INFERRED"
+              ]
+            },
+            "originalExpression": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "kind",
+            "instant",
+            "zoneId",
+            "source",
+            "originalExpression"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "proposalId",
+    "inputId",
+    "createdAt",
+    "intent",
+    "summary",
+    "uncertainFields",
+    "sourceRefs",
+    "operations"
+  ]
+}
