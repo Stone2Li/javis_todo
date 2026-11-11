@@ -1,0 +1,258 @@
+{
+  "checkedAtUtc": "2026-11-11T15:46:56.288915+00:00",
+  "scope": "M01 Swift纯领域核心，非iOS App或双平台验收",
+  "environment": {
+    "host": "Debian 13 / Linux x86_64",
+    "dockerVersion": "29.9.2",
+    "swiftVersion": "6.2.1",
+    "image": "docker.io/library/swift@sha256:0e4716bd34384d22963a63afbdbc93be3129dfd0753185aa1ded27755abdcae8",
+    "containerNetwork": "none",
+    "buildJobs": 2
+  },
+  "compile": {
+    "package": "apps/ios/Packages/JarvisDomain",
+    "target": "x86_64-unknown-linux-gnu",
+    "exitCode": 0
+  },
+  "unitTests": {
+    "runner": "XCTest",
+    "executed": 39,
+    "passed": 39,
+    "failed": 0,
+    "testNames": [
+      "testAbsentPatchDiffersFromExplicitNull",
+      "testArchivingCompletedPrerequisiteDoesNotBlockDependent",
+      "testBatchCodingIsStableAndRejectsDuplicateExpectations",
+      "testBatchSupportsForwardReferencesAndRejectsCycle",
+      "testBlockedReasonAndUnmetDependencies",
+      "testBlockedReasonCanBeUpdatedWithoutChangingStatus",
+      "testCommitUsesOneClockSampleForDataAndReceipt",
+      "testCompletionOverrideReasonSurvivesInAuditDraft",
+      "testCompletionReopenAndArchiveKeepHistorySemantics",
+      "testDSTDayLengthsAndSkippedCivilDay",
+      "testDeadlineAndEntityRoundTrips",
+      "testDecodedEntitiesCannotBypassValidation",
+      "testDeleteCleansIncomingDependenciesAndUndoRestoresThem",
+      "testFailedBatchDoesNotPartiallyApply",
+      "testIdempotentReplayPreservesLaterStateAndEmitsNoEvents",
+      "testInvalidDatesAndZonesFailWithoutNormalization",
+      "testLaterGraphChangeCannotBypassCompletionCheck",
+      "testLongDependencyChainDoesNotUseRecursiveDFS",
+      "testMissingExpectedRevisionIsRejected",
+      "testMultipleOperationsIncrementAggregateOnce",
+      "testNewTasksCannotInjectActualWorkTime",
+      "testOptionalDemandPatchRoundTripAndClear",
+      "testPreviewHasNoSideEffectsAndConfirmationIsRequired",
+      "testProjectDoneDoesNotCompleteChildren",
+      "testReferencedAggregateRequiresItsOwnRevision",
+      "testRelativeDateUsesCapturedZoneAndTime",
+      "testReusingCommandIdWithDifferentContentIsRejected",
+      "testSelfCycleIndirectCycleAndMissingDependency",
+      "testStalePreviewCannotOverwriteConcurrentEdit",
+      "testStateTransitionMatrix",
+      "testStatusTransitionRejectsAMismatchedSnapshot",
+      "testTitleUsesScalarsAndTrimsWhitespace",
+      "testUUIDAndPositiveValues",
+      "testUndoConflictDoesNotOverwriteLaterEdit",
+      "testUndoCreationProducesATombstoneInsteadOfRollingBackRevision",
+      "testUndoRestoresContentAndAdvancesRevision",
+      "testUndoRetryIsIdempotentAndPreservesRevision",
+      "testUnknownWireFieldsAreNotSilentlyIgnored",
+      "testVagueOrPeriodExpressionDoesNotInventAnInstant"
+    ],
+    "rawLogSha256": "d22208c8e9f9112eb87434189a08e98ff7e2be9c133cccc0f409b31614e3424a"
+  },
+  "swiftTestingRunner": {
+    "executed": 0,
+    "note": "本包未定义Swift Testing suites，不能计作XCTest用例"
+  },
+  "sharedFixtures": {
+    "executed": 12,
+    "failed": 0,
+    "passed": 12,
+    "results": [
+      {
+        "actual": {
+          "revision": 1,
+          "status": "INBOX",
+          "title": "整理数据"
+        },
+        "expected": {
+          "revision": 1,
+          "status": "INBOX",
+          "title": "整理数据"
+        },
+        "id": "D01-CREATE",
+        "passed": true
+      },
+      {
+        "actual": {
+          "error": "DEPENDENCY_CYCLE"
+        },
+        "expected": {
+          "error": "DEPENDENCY_CYCLE"
+        },
+        "id": "D02-CYCLE",
+        "passed": true
+      },
+      {
+        "actual": {
+          "durationMs": 82800000
+        },
+        "expected": {
+          "durationMs": 82800000
+        },
+        "id": "D03-DST-SPRING",
+        "passed": true
+      },
+      {
+        "actual": {
+          "durationMs": 90000000
+        },
+        "expected": {
+          "durationMs": 90000000
+        },
+        "id": "D03-DST-AUTUMN",
+        "passed": true
+      },
+      {
+        "actual": {
+          "kind": "NONE",
+          "uncertainFields": [
+            "deadline"
+          ]
+        },
+        "expected": {
+          "kind": "NONE",
+          "uncertainFields": [
+            "deadline"
+          ]
+        },
+        "id": "D04-VAGUE-DATE",
+        "passed": true
+      },
+      {
+        "actual": {
+          "completedAt": "2026-11-11T10:00:00.000Z",
+          "status": "DONE"
+        },
+        "expected": {
+          "completedAt": "2026-11-11T10:00:00.000Z",
+          "status": "DONE"
+        },
+        "id": "D05-STATUS",
+        "passed": true
+      },
+      {
+        "actual": {
+          "error": "REVISION_CONFLICT"
+        },
+        "expected": {
+          "error": "REVISION_CONFLICT"
+        },
+        "id": "D06-STALE-PREVIEW",
+        "passed": true
+      },
+      {
+        "actual": {
+          "error": "UNDO_CONFLICT"
+        },
+        "expected": {
+          "error": "UNDO_CONFLICT"
+        },
+        "id": "D07-UNDO-CONFLICT",
+        "passed": true
+      },
+      {
+        "actual": {
+          "eventCount": 0,
+          "replayed": true,
+          "revision": 2
+        },
+        "expected": {
+          "eventCount": 0,
+          "replayed": true,
+          "revision": 2
+        },
+        "id": "D08-IDEMPOTENCY",
+        "passed": true
+      },
+      {
+        "actual": {
+          "error": "CONFIRMATION_REQUIRED"
+        },
+        "expected": {
+          "error": "CONFIRMATION_REQUIRED"
+        },
+        "id": "D09-NO-CONFIRMATION",
+        "passed": true
+      },
+      {
+        "actual": {
+          "kind": "DATE",
+          "localDate": "2026-11-13",
+          "zoneId": "Asia/Shanghai"
+        },
+        "expected": {
+          "kind": "DATE",
+          "localDate": "2026-11-13",
+          "zoneId": "Asia/Shanghai"
+        },
+        "id": "D10-CAPTURE-TIME-ZONE",
+        "passed": true
+      },
+      {
+        "actual": {
+          "kind": "DATE",
+          "localDate": "2026-11-18",
+          "zoneId": "Asia/Shanghai"
+        },
+        "expected": {
+          "kind": "DATE",
+          "localDate": "2026-11-18",
+          "zoneId": "Asia/Shanghai"
+        },
+        "id": "D11-NEXT-WEEK",
+        "passed": true
+      }
+    ],
+    "suite": "M01"
+  },
+  "fixtureRunnerNegativeControl": {
+    "expectedExit": 1,
+    "actualExit": 1,
+    "detectedMismatch": true
+  },
+  "documentContractChecks": {
+    "passed": 16,
+    "scope": "文档与契约示例；不代表业务逻辑或平台已实现/通过"
+  },
+  "inputContentSha256": "433539531e836d7b88f9ab0f967f40fa8a97fbda2e81bf7bc6586ec7b4a5b5b5",
+  "manifestAlgorithm": "SHA256(newline_join(path + colon + file_sha256), sorted by path)",
+  "sourceFiles": {
+    "apps/ios/Packages/JarvisDomain/Package.swift": "c10f755d7dcf3d4d3e096c012946687c1d972c9d8286f412de65a0cba0075834",
+    "apps/ios/Packages/JarvisDomain/Sources/DomainFixtures/main.swift": "c16015883194185967d7f310ae94bf38afc7f6eb9f204d7717a9058ce702b61d",
+    "apps/ios/Packages/JarvisDomain/Sources/JarvisDomain/ChangePlanner.swift": "2a870e2b178ac02b3eb5ef62e4f7ef78a708aa7f0baae9cf2a01b046dc740f26",
+    "apps/ios/Packages/JarvisDomain/Sources/JarvisDomain/Changes.swift": "253d701e62cd88d02e33b9ed0184dc02b042d4e863ec421470ce34d244c49973",
+    "apps/ios/Packages/JarvisDomain/Sources/JarvisDomain/Deadline.swift": "fcf0f3842494df8eb9ae8e6d96d26af26fb4b62b975854e2c4ecd58f276a97e5",
+    "apps/ios/Packages/JarvisDomain/Sources/JarvisDomain/Entities.swift": "2d74bcb62699fe915a985f39dc86bdc24bb5cbd85f564bfcb8e65f40bc03129e",
+    "apps/ios/Packages/JarvisDomain/Sources/JarvisDomain/Rules.swift": "630387ed11dd5762d8dfd71b6d39e6887608dc029c3266cb49d915dad2a0a10b",
+    "apps/ios/Packages/JarvisDomain/Sources/JarvisDomain/Values.swift": "70ce0d25a33f15eeb86d6324d236c78ee893b11638c5fd6bb56961adaedb3442",
+    "apps/ios/Packages/JarvisDomain/Tests/JarvisDomainTests/DomainTests.swift": "20f2a334806a41cff6df398a84b9eb2ce4a18009f6eb447b28887d3440bdada8",
+    "fixtures/domain/m01.json": "5fed6054d2728c621cdbe709d8dd2baada2aad76dd6389fbcc20db9138457e64",
+    "tools/check-domain.sh": "a8340558de3af1049059dcfc6cc3f6bcb047eba3c6d12ef0e810406b35fd6f5d",
+    "tools/swift-image.txt": "489ed52c4dda3d3d5f857ba48614c0312e617266ee14d9874ec6a60f01d085d0",
+    "tools/swift.sh": "980423d9534e04a43bbd626bfee810be39aefe501778c7e100b9e022e0dfac5c"
+  },
+  "notRun": [
+    "macOS/iOS SDK编译、签名、模拟器和iPhone真机",
+    "ArkTS/HarmonyOS工具链、移植和真机",
+    "SQLite与数据库原子性/并发、迁移、备份",
+    "UI、ASR、密钥安全存储、模型、购买与商店审核"
+  ],
+  "implementationLimits": [
+    "commit与undo使用完整值快照保守检查；不支持无关编辑自动合并",
+    "没有持久化，AppliedCommand记录、事件UUID与事务由M02提供",
+    "fingerprint为本地规范化内容比较，不是认证或密码学签名"
+  ]
+}

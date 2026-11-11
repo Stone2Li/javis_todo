@@ -1,0 +1,191 @@
+{
+  "contractVersion": "1.0",
+  "referenceInstant": "2026-11-11T10:00:00.000Z",
+  "cases": [
+    {
+      "id": "D01-CREATE",
+      "scenario": "create",
+      "input": {
+        "title": "  整理数据  "
+      },
+      "expected": {
+        "title": "整理数据",
+        "status": "INBOX",
+        "revision": 1
+      }
+    },
+    {
+      "id": "D02-CYCLE",
+      "scenario": "graph",
+      "input": {
+        "tasks": [
+          {
+            "id": "11111111-1111-4111-8111-111111111111",
+            "title": "Original",
+            "status": "TODO",
+            "dependencies": [
+              "22222222-2222-4222-8222-222222222222"
+            ]
+          },
+          {
+            "id": "22222222-2222-4222-8222-222222222222",
+            "title": "B",
+            "dependencies": [
+              "11111111-1111-4111-8111-111111111111"
+            ]
+          }
+        ]
+      },
+      "expected": {
+        "error": "DEPENDENCY_CYCLE"
+      }
+    },
+    {
+      "id": "D03-DST-SPRING",
+      "scenario": "dayInterval",
+      "input": {
+        "localDate": "2026-03-08",
+        "zoneId": "America/New_York"
+      },
+      "expected": {
+        "durationMs": 82800000
+      }
+    },
+    {
+      "id": "D03-DST-AUTUMN",
+      "scenario": "dayInterval",
+      "input": {
+        "localDate": "2026-11-01",
+        "zoneId": "America/New_York"
+      },
+      "expected": {
+        "durationMs": 90000000
+      }
+    },
+    {
+      "id": "D04-VAGUE-DATE",
+      "scenario": "resolve",
+      "input": {
+        "expression": "尽快",
+        "zoneId": "Asia/Shanghai"
+      },
+      "expected": {
+        "kind": "NONE",
+        "uncertainFields": [
+          "deadline"
+        ]
+      }
+    },
+    {
+      "id": "D05-STATUS",
+      "scenario": "status",
+      "input": {
+        "tasks": [
+          {
+            "id": "11111111-1111-4111-8111-111111111111",
+            "title": "Original",
+            "status": "TODO"
+          }
+        ],
+        "targetStatus": "DONE"
+      },
+      "expected": {
+        "status": "DONE",
+        "completedAt": "2026-11-11T10:00:00.000Z"
+      }
+    },
+    {
+      "id": "D06-STALE-PREVIEW",
+      "scenario": "stale",
+      "input": {
+        "tasks": [
+          {
+            "id": "11111111-1111-4111-8111-111111111111",
+            "title": "Original",
+            "status": "TODO"
+          }
+        ]
+      },
+      "expected": {
+        "error": "REVISION_CONFLICT"
+      }
+    },
+    {
+      "id": "D07-UNDO-CONFLICT",
+      "scenario": "undoConflict",
+      "input": {
+        "tasks": [
+          {
+            "id": "11111111-1111-4111-8111-111111111111",
+            "title": "Original",
+            "status": "TODO"
+          }
+        ]
+      },
+      "expected": {
+        "error": "UNDO_CONFLICT"
+      }
+    },
+    {
+      "id": "D08-IDEMPOTENCY",
+      "scenario": "idempotency",
+      "input": {
+        "tasks": [
+          {
+            "id": "11111111-1111-4111-8111-111111111111",
+            "title": "Original",
+            "status": "TODO"
+          }
+        ]
+      },
+      "expected": {
+        "replayed": true,
+        "revision": 2,
+        "eventCount": 0
+      }
+    },
+    {
+      "id": "D09-NO-CONFIRMATION",
+      "scenario": "confirmation",
+      "input": {
+        "tasks": [
+          {
+            "id": "11111111-1111-4111-8111-111111111111",
+            "title": "Original",
+            "status": "TODO"
+          }
+        ]
+      },
+      "expected": {
+        "error": "CONFIRMATION_REQUIRED"
+      }
+    },
+    {
+      "id": "D10-CAPTURE-TIME-ZONE",
+      "scenario": "resolve",
+      "input": {
+        "expression": "明天",
+        "zoneId": "Asia/Shanghai",
+        "referenceInstant": "2026-11-11T16:30:00.000Z"
+      },
+      "expected": {
+        "kind": "DATE",
+        "localDate": "2026-11-13",
+        "zoneId": "Asia/Shanghai"
+      }
+    },
+    {
+      "id": "D11-NEXT-WEEK",
+      "scenario": "resolve",
+      "input": {
+        "expression": "下周三",
+        "zoneId": "Asia/Shanghai"
+      },
+      "expected": {
+        "kind": "DATE",
+        "localDate": "2026-11-18",
+        "zoneId": "Asia/Shanghai"
+      }
+    }
+  ]
+}

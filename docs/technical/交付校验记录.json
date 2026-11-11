@@ -1,6 +1,6 @@
 {
   "documentDate": "2026-11-10",
-  "checkedAtUtc": "2026-11-11T15:02:43.237022+00:00",
+  "checkedAtUtc": "2026-11-11T15:43:04.408262+00:00",
   "scope": "文档与契约示例；不代表业务逻辑或平台已实现/通过",
   "validator": "jsonschema 4.26.0",
   "dateTimeAssertion": "explicit UTC millisecond pattern + datetime parser",
